@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ki Hayashi | Global Business Strategy &amp; Operational Excellence</title>
+<meta name="description" content="Ki Hayashi: global business strategy and operational excellence leader with an Executive MBA and 18+ years across semiconductor engineering, smart factory DX and global corporate planning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0d10;        /* black diamond */
+    --bg-2:#12151a;
+    --line:#2a2f37;
+    --text:#f4f4f2;
+    --muted:#a3a8b0;
+    --white:#ffffff;
+    --pad:clamp(20px,6vw,64px);
+    --max:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;line-height:1.7;overflow-x:hidden;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+  section{padding:72px 0;border-top:1px solid var(--line)}
+  .eyebrow{
+    font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);
+    display:flex;align-items:center;gap:14px;margin-bottom:28px;
+  }
+  .eyebrow::after{content:"";height:1px;flex:1;background:var(--line)}
+  h1,h2,h3{line-height:1.15;font-weight:700;letter-spacing:-.01em}
+  h2{font-size:clamp(1.7rem,6vw,2.5rem);margin-bottom:36px;max-width:24ch}
+
+  /* Hero */
+  .hero{padding:48px 0 72px;border-top:0}
+  .hero .wrap{display:grid;gap:36px}
+  .portrait{
+    position:relative;width:min(78%,340px);aspect-ratio:1/1;justify-self:start;
+  }
+  .portrait::before{
+    content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid var(--white);
+  }
+  .portrait img{
+    position:relative;width:100%;height:100%;object-fit:cover;object-position:50% 22%;
+    filter:grayscale(1) contrast(1.08);
+  }
+  .hero h1{font-size:clamp(2.6rem,13vw,5.4rem);font-weight:800;letter-spacing:-.03em;line-height:1}
+  .hero .role{
+    margin-top:18px;font-size:clamp(1.05rem,4.4vw,1.4rem);font-weight:400;color:var(--text);max-width:30ch;
+  }
+  .hero .lead{margin-top:20px;color:var(--muted);max-width:52ch}
+  .btn{
+    display:inline-flex;align-items:center;gap:12px;margin-top:30px;
+    padding:15px 26px;min-height:48px;background:var(--white);color:var(--bg);
+    font-weight:600;text-decoration:none;border:1px solid var(--white);
+    transition:background .25s,color .25s;
+  }
+  .btn:hover,.btn:focus-visible{background:transparent;color:var(--white);outline:none}
+  .btn span{transition:transform .25s}
+  .btn:hover span{transform:translateX(4px)}
+
+
+  /* About */
+  .about-lead{font-size:clamp(1.05rem,4.2vw,1.3rem);line-height:1.6;max-width:56ch}
+  .about-body{color:var(--muted);max-width:60ch;margin-top:18px}
+  .caps{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin:40px 0 32px}
+  .cap{background:var(--bg);padding:24px 20px}
+  .cap h3{font-size:1.05rem;margin-bottom:8px}
+  .cap p{color:var(--muted);font-size:.97rem;line-height:1.6}
+  .about-close{max-width:60ch}
+  .about .tags{margin:28px 0 0}
+
+  /* Journey timeline */
+  .timeline{position:relative;display:grid;gap:16px;padding-left:30px}
+  .timeline::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:var(--line)}
+  .t-item{position:relative;background:var(--bg-2);border:1px solid var(--line);padding:20px 20px 18px}
+  .t-item::before{
+    content:"";position:absolute;left:-30px;top:26px;width:11px;height:11px;border-radius:50%;
+    background:var(--bg);border:1px solid var(--white);
+  }
+  .t-item:last-child::before{background:var(--white)}
+  .t-item .when{font-size:.78rem;letter-spacing:.18em;color:var(--muted)}
+  .t-item h3{font-size:1.1rem;margin:6px 0 2px}
+  .t-item .org{color:var(--muted);font-size:.92rem}
+  .t-item p{margin-top:10px;font-size:.98rem;line-height:1.6}
+
+  /* Achievements */
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+  .stat{background:var(--bg);padding:26px 18px 24px}
+  .stat .num{
+    font-size:clamp(2.3rem,10.5vw,3.6rem);font-weight:800;letter-spacing:-.03em;line-height:1;
+  }
+  .stat .unit{display:block;margin-top:6px;font-size:.8rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+  .stat p{margin-top:12px;font-size:.95rem;line-height:1.5}
+
+  /* Projects, told in STAR */
+  .story{padding:44px 0;border-top:1px solid var(--line)}
+  .story:first-of-type{border-top:0;padding-top:8px}
+  .story .idx{font-size:.8rem;letter-spacing:.2em;color:var(--muted)}
+  .story h3{font-size:clamp(1.35rem,5.2vw,2rem);margin:8px 0 18px;max-width:30ch}
+  .headline{
+    border-left:2px solid var(--white);padding:2px 0 2px 16px;max-width:62ch;
+    font-size:1.05rem;line-height:1.55;
+  }
+  .headline b{display:block;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:4px}
+  .tags{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 30px}
+  .tags li{font-size:.78rem;padding:4px 12px;border:1px solid var(--line);color:var(--muted);border-radius:999px}
+
+  .star{list-style:none;position:relative}
+  .step{
+    position:relative;display:grid;grid-template-columns:58px 1fr;column-gap:16px;
+    padding:0 0 26px;
+  }
+  .step::before{ /* connecting line between letters */
+    content:"";position:absolute;left:28px;top:62px;bottom:-4px;width:1px;background:var(--line);
+  }
+  .step:last-child::before{display:none}
+  .letter{
+    font-size:3.6rem;font-weight:800;line-height:1;letter-spacing:-.04em;
+    color:transparent;-webkit-text-stroke:1.2px var(--white);
+    height:60px;
+  }
+  .step h4{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin:6px 0 8px}
+  .step h4 small{color:var(--muted);font-weight:400;letter-spacing:.1em;margin-left:6px;text-transform:none;font-size:.85em}
+  .step p,.step li{max-width:62ch}
+  .step ul{padding-left:18px;display:grid;gap:8px}
+  .step ul li::marker{color:var(--muted)}
+  .step .body > p + ul{margin-top:10px}
+
+  .step.result{
+    background:var(--white);color:var(--bg);padding:24px 18px 26px;margin-top:4px;
+  }
+  .step.result::before{display:none}
+  .step.result .letter{color:var(--bg);-webkit-text-stroke:0}
+  .step.result h4 small{color:#4a4f57}
+  .metrics{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;margin:4px 0 16px}
+  .metrics div b{display:block;font-size:clamp(1.7rem,8vw,2.6rem);font-weight:800;letter-spacing:-.03em;line-height:1}
+  .metrics div span{display:block;font-size:.8rem;line-height:1.35;margin-top:6px;color:#3d424a}
+
+  .lesson{
+    margin-top:22px;padding:16px 18px;border:1px dashed #4a4f57;max-width:62ch;color:var(--text);
+  }
+  .lesson b{display:block;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:4px}
+  .star-legend{color:var(--muted);max-width:60ch;margin:-12px 0 36px}
+  .star-legend strong{color:var(--text);font-weight:600}
+
+  /* Skills */
+  .skills{display:grid;gap:30px}
+  .skill h3{font-size:1.05rem;margin-bottom:8px;display:flex;gap:12px;align-items:baseline}
+  .skill h3::before{content:"";width:18px;height:1px;background:var(--white);transform:translateY(-4px)}
+  .skill p{color:var(--muted);max-width:60ch}
+  .edu{margin-top:48px;display:grid;gap:14px}
+  .edu div{border-left:1px solid var(--white);padding-left:16px}
+  .edu strong{display:block;font-weight:600}
+  .edu span{color:var(--muted);font-size:.95rem}
+
+  /* Contact */
+  .contact{text-align:left}
+  .contact h2{max-width:20ch}
+  .contact p{color:var(--muted);max-width:52ch}
+  footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+
+  /* Reveal (only when JS is on) */
+  .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .js .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .js .reveal{opacity:1;transform:none;transition:none}
+  }
+
+  .js .step.reveal:nth-child(2){transition-delay:.08s}
+  .js .step.reveal:nth-child(3){transition-delay:.16s}
+  .js .step.reveal:nth-child(4){transition-delay:.24s}
+
+  /* Tablet and desktop */
+  @media (min-width:720px){
+    section{padding:104px 0}
+    .hero{padding:80px 0 104px}
+    .hero .wrap{grid-template-columns:1.2fr 1fr;align-items:center;gap:64px}
+    .portrait{grid-column:2;grid-row:1;justify-self:end;width:min(100%,400px)}
+    .timeline{padding-left:0;grid-template-columns:1fr 1fr;column-gap:64px;row-gap:20px}
+    .timeline::before{left:50%}
+    .t-item:nth-child(odd){grid-column:1}
+    .t-item:nth-child(even){grid-column:2}
+    .t-item:nth-child(1){grid-row:1}.t-item:nth-child(2){grid-row:2}.t-item:nth-child(3){grid-row:3}
+    .t-item:nth-child(4){grid-row:4}.t-item:nth-child(5){grid-row:5}.t-item:nth-child(6){grid-row:6}
+    .t-item:nth-child(odd)::before{left:auto;right:-37px}
+    .t-item:nth-child(even)::before{left:-37px}
+    .caps{grid-template-columns:1fr 1fr}
+    .cap{padding:30px 28px}
+    .stats{grid-template-columns:repeat(3,1fr)}
+    .stat{padding:34px 26px 30px}
+    .step{grid-template-columns:104px 1fr;column-gap:28px;padding-bottom:34px}
+    .step::before{left:52px;top:96px}
+    .letter{font-size:6rem;height:96px;-webkit-text-stroke-width:1.4px}
+    .step h4{margin-top:14px}
+    .step.result{padding:34px 32px 36px;grid-template-columns:104px 1fr}
+    .metrics{grid-template-columns:repeat(4,auto);justify-content:start;gap:18px 44px}
+    .skills{grid-template-columns:1fr 1fr;gap:40px 56px}
+    .edu{grid-template-columns:repeat(3,1fr)}
+  }
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="portrait reveal">
+      <img src="ki.jpeg" alt="Portrait of Ki Hayashi" width="800" height="800">
+    </div>
+    <div class="reveal">
+      <h1>Ki Hayashi</h1>
+      <p class="role">Global business strategy specialist, trained as a hardware and software engineer, with an MBA.</p>
+      <p class="lead">I turn complex technical challenges into business outcomes, backed by data. Over 18 years I have moved from semiconductor design, Linux drivers and printer hardware to global growth strategy at Kyocera.</p>
+      <a class="btn" href="https://www.linkedin.com/in/ki-hayashi/" target="_blank" rel="noopener">Connect on LinkedIn <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="about" class="about">
+    <div class="wrap">
+      <div class="eyebrow reveal">About</div>
+      <h2 class="reveal">Bridging high-level strategy and on-the-ground execution</h2>
+      <p class="about-lead reveal">Global Business Strategy &amp; Operational Excellence Leader with an Executive MBA and over 18 years of experience spanning semiconductor hardware/software engineering, smart factory DX, and global corporate planning.</p>
+      <p class="about-body reveal">With a deep technical foundation in engineering and industrial automation, combined with strategic business management, I specialize in bridging high-level corporate strategy with on-the-ground operational execution. My track record includes driving data-driven Lean/Kaizen transformations and building global talent ecosystems to fuel sustainable growth.</p>
+      <div class="caps reveal">
+        <div class="cap"><h3>Global Strategy &amp; Expansion</h3><p>Spearheading global supply chain restructuring and market entry strategies across ASEAN and India for advanced ceramic and semiconductor components.</p></div>
+        <div class="cap"><h3>Operational Excellence &amp; DX</h3><p>Driving process optimization (Lean/Kaizen) using Python, RPA, and RFID technology to automate workflows, streamline supply chains, and deliver quantifiable financial results.</p></div>
+        <div class="cap"><h3>Program Management &amp; PMO</h3><p>Leading complex, cross-functional projects from early-stage product engineering and launch to establishing global talent development frameworks.</p></div>
+        <div class="cap"><h3>Multilingual Leadership</h3><p>Fluent in English (TOEIC 780), Japanese (JLPT N1), and Vietnamese, with extensive experience building, mentoring, and leading high-performing multicultural teams.</p></div>
+      </div>
+      <p class="about-close reveal">Driven by data-based decision-making and continuous improvement, I thrive in fast-paced, complex environments where I can leverage technology, business acumen, and cross-cultural leadership to transform operations and scale global businesses.</p>
+      <ul class="tags reveal"><li>Global Business Strategy</li><li>Program Management (PMO)</li><li>Process Improvement &amp; Lean Kaizen</li><li>Digital Transformation (DX)</li><li>Supply Chain Optimization</li><li>Cross-Functional Leadership</li><li>Executive MBA</li></ul>
+    </div>
+  </section>
+
+  <section id="journey">
+    <div class="wrap">
+      <div class="eyebrow reveal">Journey</div>
+      <h2 class="reveal">From chip design to global strategy</h2>
+      <div class="timeline">
+        <div class="t-item reveal"><div class="when">2003 – 2008</div><h3>B.Eng. in Industrial Automatic Electricity</h3><div class="org">Vietnam Maritime University</div><p>The engineering foundation for every step that followed.</p></div>
+        <div class="t-item reveal"><div class="when">2008 – 2013</div><h3>Hardware and software engineer</h3><div class="org">Jinzai Solution, seconded to Hitachi ULSI Systems</div><p>Designed and verified logic for memory LSI and ASIC, then moved into Linux and developed over 20 device drivers.</p></div>
+        <div class="t-item reveal"><div class="when">2013 – 2017</div><h3>Printer hardware design engineer</h3><div class="org">Kyocera Document Solutions</div><p>Designed the department's most complex engine controller board, earned 4 patents and trained 25 engineers in Vietnam.</p></div>
+        <div class="t-item reveal"><div class="when">2017 – 2023</div><h3>Product Leader, manufacturing engineering</h3><div class="org">Kyocera Document Solutions</div><p>Brought Kyocera's first commercial inkjet printer into mass production, cut operating costs at the Vietnam factory and rolled the model out to China.</p></div>
+        <div class="t-item reveal"><div class="when">2021 – 2023</div><h3>Executive MBA</h3><div class="org">NUCB Business School</div><p>Studied alongside work, opening the path from engineering to business strategy.</p></div>
+        <div class="t-item reveal"><div class="when">2023 – present</div><h3>Senior Professional, Global Business Strategy</h3><div class="org">Kyocera Corporation</div><p>Leading global growth strategy for the fine ceramics business, with a focus on ASEAN and India.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <div class="wrap">
+      <div class="eyebrow reveal">Achievements</div>
+      <h2 class="reveal">Numbers I am proud of</h2>
+      <div class="stats reveal">
+        <div class="stat">
+          <span class="num">18+</span><span class="unit">years of experience</span>
+          <p>From semiconductor design and printer hardware to global business strategy.</p>
+        </div>
+        <div class="stat">
+          <span class="num">#1</span><span class="unit">commercial inkjet printer</span>
+          <p>Led the manufacturing technology that brought Kyocera's first commercial inkjet printer to market.</p>
+        </div>
+        <div class="stat">
+          <span class="num">25</span><span class="unit">engineers in Vietnam</span>
+          <p>Trained and mentored when the R&amp;D department at the Vietnam factory was set up.</p>
+        </div>
+        <div class="stat">
+          <span class="num">6</span><span class="unit">patents</span>
+          <p>Registered, from printer hardware design to manufacturing engineering.</p>
+        </div>
+        <div class="stat">
+          <span class="num">200+</span><span class="unit">booth visitors</span>
+          <p>At an industry exhibition in ASEAN, beating the target.</p>
+        </div>
+        <div class="stat">
+          <span class="num">20+</span><span class="unit">Linux drivers</span>
+          <p>Developed and verified for Renesas R-Car and Android systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="eyebrow reveal">Selected projects</div>
+      <h2 class="reveal">Three stories, four chapters each</h2>
+      <p class="star-legend reveal">Each project follows the STAR structure: <strong>S</strong>ituation, <strong>T</strong>ask, <strong>A</strong>ction and <strong>R</strong>esult, plus the lesson I took away.</p>
+      <article class="story">
+        <div class="idx reveal">01 · 2023 – present</div>
+        <h3 class="reveal">Global growth for the fine ceramics business in ASEAN and India</h3>
+        <p class="headline reveal"><b>Result in one line</b>Opened a path to local production in Vietnam and a new market in India for ceramic components serving the semiconductor industry.</p>
+        <ul class="tags reveal"><li>Ownership</li><li>Long-term thinking</li><li>Cross-stakeholder work</li></ul>
+        <ol class="star">
+          <li class="step reveal"><div class="letter" aria-hidden="true">S</div><div class="body"><h4>Situation</h4><p>Major customers of the fine ceramics business, which supplies components for semiconductor equipment, began shifting production to ASEAN and India, demanding lower prices and faster delivery. Competitors had already invested in the region, while our revenue there was still very small.</p></div></li>
+          <li class="step reveal"><div class="letter" aria-hidden="true">T</div><div class="body"><h4>Task</h4><p>I was responsible for analyzing the market, our competitive position and our internal capability gaps, then designing and driving a restructuring program spanning three years of investment decisions and many stakeholders inside and outside the company.</p></div></li>
+          <li class="step reveal"><div class="letter" aria-hidden="true">A</div><div class="body"><h4>Action</h4><p>I built a regular reporting and milestone framework with division leadership, then launched a "local-for-local" model:</p><ul><li><strong>Vietnam:</strong> ran a business simulation for producing at an existing factory, found local processing subcontractors and used trial production to verify quality.</li><li><strong>India:</strong> opened a path into the market and built relationships with new customers through a joint exhibition.</li><li><strong>Market:</strong> led two industry exhibitions in ASEAN and India.</li><li><strong>People:</strong> designed and now run a global talent development program.</li></ul></div></li>
+          <li class="step reveal result"><div class="letter" aria-hidden="true">R</div><div class="body"><h4>Result</h4><div class="metrics"><div><b>200+</b><span>visitors at an exhibition in ASEAN, above target</span></div><div><b>10/10</b><span>inquiries at an exhibition in India turned into quotation requests</span></div><div><b>2</b><span>exhibitions in ASEAN and India that I led</span></div></div><p>I completed the business case for production in Vietnam and found a local subcontractor that met our quality standards through trial production.</p></div></li>
+        </ol>
+        <p class="lesson reveal"><b>Lesson</b>Real exhibition data showed that brand awareness in the local market was still low, which is why I proposed revisiting our brand strategy for the region.</p>
+      </article>
+
+      <article class="story">
+        <div class="idx reveal">02 · 2017 – 2023</div>
+        <h3 class="reveal">Kyocera's first commercial inkjet printer and a PCB design standard for A3 MFPs</h3>
+        <p class="headline reveal"><b>Result in one line</b>Kyocera's first commercial inkjet printer reached the market, and one PCB standard was reused across multiple models.</p>
+        <ul class="tags reveal"><li>Ownership</li><li>Dive deep</li><li>Deliver results</li></ul>
+        <ol class="star">
+          <li class="step reveal"><div class="letter" aria-hidden="true">S</div><div class="body"><h4>Situation</h4><p>The printing business operated in a shrinking market. Kyocera needed to cut costs on its flagship A3 MFP line and, at the same time, create a new growth path with its first commercial inkjet printer, a high-risk project.</p></div></li>
+          <li class="step reveal"><div class="letter" aria-hidden="true">T</div><div class="body"><h4>Task</h4><p>As technical leader, I was responsible for two things at once: automating PCB assembly for the A3 MFP, and establishing mass-production technology for the inkjet printer, with demanding waterproofing and reliability requirements.</p></div></li>
+          <li class="step reveal"><div class="letter" aria-hidden="true">A</div><div class="body"><h4>Action</h4><ul><li>Analyzed the entire existing design and assembly process, then set a PCB design standard that allows automated assembly.</li><li>Set the technical standards for waterproofing and high reliability when bringing the inkjet printer boards into production.</li><li>Standardized FCT/ICT jigs suited to low-volume production from the design stage.</li><li>Visited key suppliers in China many times for hands-on technical guidance and training of local engineers.</li></ul></div></li>
+          <li class="step reveal result"><div class="letter" aria-hidden="true">R</div><div class="body"><h4>Result</h4><div class="metrics"><div><b>#1</b><span>commercial inkjet printer from Kyocera launched to market</span></div><div><b>2</b><span>patents registered</span></div></div><p>The PCB standard I set was not used for a single model only. It became the foundation for improving the assembly process of later models.</p></div></li>
+        </ol>
+        <p class="lesson reveal"><b>Lesson</b>The greatest value lies in the platform, not just one product. Standardize once so many models benefit.</p>
+      </article>
+
+      <article class="story">
+        <div class="idx reveal">03 · 2017 – 2023</div>
+        <h3 class="reveal">Operational transformation with Hackathon, RFID and Python</h3>
+        <p class="headline reveal"><b>Result in one line</b>Cut operating costs at the Vietnam factory through a Hackathon-style program, then rolled the model out to the factory in China.</p>
+        <ul class="tags reveal"><li>Driving change</li><li>Critical thinking</li><li>Data-driven decisions</li></ul>
+        <ol class="star">
+          <li class="step reveal"><div class="letter" aria-hidden="true">S</div><div class="body"><h4>Situation</h4><p>Two large programs ran at once: smart factory digitalization, and breaking a cost structure locked in by old habits. I was both the leader of the operational improvement activity and the RPA leader.</p></div></li>
+          <li class="step reveal"><div class="letter" aria-hidden="true">T</div><div class="body"><h4>Task</h4><p>Significantly reduce annual costs at the Vietnam factory while keeping quality, build a success model that could be replicated company-wide, and digitalize the supply chain to end the lack of component traceability.</p></div></li>
+          <li class="step reveal"><div class="letter" aria-hidden="true">A</div><div class="body"><h4>Action</h4><ul><li>Designed a change mechanism in the style of a Hackathon, led 2 teams in the department, and brought the ECRS principles and a "challenge conventional wisdom" mindset into every decision.</li><li>Decided to switch to low-silver (1%) lead-free solder despite quality concerns, and brought some outsourced processes in-house with a mobile mounting line.</li><li>Personally led negotiations and technical validation with outsourcing vendors and overseas factories.</li><li>Standardized supplier packaging into RFID-tagged returnable containers, combined with a new WMS to automate receiving inspection.</li><li>Wrote Python tools that automate everything from analyzing CSV data and drawing charts to sending reports.</li></ul></div></li>
+          <li class="step reveal result"><div class="letter" aria-hidden="true">R</div><div class="body"><h4>Result</h4><div class="metrics"><div><b>2</b><span>factories using the model, in Vietnam and China</span></div><div><b>2</b><span>Hackathon teams I led directly</span></div><div><b>1%</b><span>silver content of the new lead-free solder</span></div></div><p>The RFID infrastructure made all electronic and electrical components traceable, and the RPA and Python tools cut the time spent on data processing and reporting significantly.</p></div></li>
+        </ol>
+        <p class="lesson reveal"><b>Lesson</b>To make people change old habits, turn the change into a competition with clear numbers.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="eyebrow reveal">Skills</div>
+      <h2 class="reveal">What I do well</h2>
+      <div class="skills reveal">
+        <div class="skill"><h3>Program management</h3><p>Leading strategic programs from design and execution to executive reporting.</p></div>
+        <div class="skill"><h3>Change management</h3><p>Designing the Hackathon mechanism, redesigning processes, standardizing and rolling out models globally.</p></div>
+        <div class="skill"><h3>Data-driven decisions</h3><p>Python, KPI design, supply chain traceability with RFID and WMS.</p></div>
+        <div class="skill"><h3>Stakeholder management</h3><p>Working with leadership, overseas partners, suppliers and sales organizations.</p></div>
+        <div class="skill"><h3>Global experience</h3><p>Market expansion in ASEAN and India, building capability at factories in Vietnam and China.</p></div>
+        <div class="skill"><h3>Technical foundation</h3><p>LSI/ASIC logic design with Verilog HDL and FPGA, Linux driver development in C, and PCB design.</p></div>
+      </div>
+      <div class="edu reveal">
+        <div><strong>Executive MBA</strong><span>NUCB Business School, 2021 – 2023</span></div>
+        <div><strong>B.Eng. in Industrial Automatic Electricity</strong><span>Vietnam Maritime University, 2003 – 2008</span></div>
+        <div><strong>Languages</strong><span>English TOEIC 780 · Japanese JLPT N1 · Vietnamese</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="eyebrow reveal">Contact</div>
+      <h2 class="reveal">Let's talk about the right opportunity</h2>
+      <p class="reveal">If you are looking for someone who can connect engineering with business, I would be glad to talk about career opportunities.</p>
+      <a class="btn reveal" href="https://www.linkedin.com/in/ki-hayashi/" target="_blank" rel="noopener">Message me on LinkedIn <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Ki Hayashi</div>
+</footer>
+
+<script>
+  (function(){
+    var els=document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
+    },{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  })();
+</script>
+</body>
+</html>
